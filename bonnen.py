@@ -215,4 +215,5 @@ for groep in articles['Groep'].unique():
 # print(boekingen.to_string())
 
 print()
-print(f"Totaalbedrag incl. btw: {articles['Bedrag na korting incl. BTW (x100)'].sum()}")
+print(f"Totaal bedrag volgens bon: {as_bedrag(te_betalen)}, totaal bedrag: {as_bedrag(articles['Bedrag na korting incl. BTW (x100)'].sum())}")
+print(f"verschil: {as_bedrag(articles['Bedrag na korting incl. BTW (x100)'].sum() - te_betalen)}")
